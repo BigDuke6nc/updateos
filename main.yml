@@ -1,7 +1,8 @@
 - name: Update OS
   hosts: all
   gather_facts: yes
-  become: yes
+  become: true
+  become_method: sudo
 
   tasks:
     - name: Execute os_updates Role
