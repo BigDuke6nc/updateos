@@ -1,9 +1,9 @@
-- name: Config Vim with plugins
+- name: Update OS
   hosts: all
   gather_facts: yes
-  become: no
+  become: yes
 
   tasks:
-    - name: Configure Vim using role
+    - name: Execute os_updates Role
       import_role:
         name: os_updates
